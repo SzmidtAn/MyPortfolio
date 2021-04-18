@@ -13,14 +13,13 @@ export class Contact extends React.Component {
                 </div>
 
                 <div className="Footer">
-                    <p>Email</p>
-                    <p>LinkedIn</p>
-                    <p>GitHub</p>
+                    <p className="red">Email</p>
+                    <p className="red">LinkedIn</p>
+                    <p className="red">GitHub</p>
 
 
 
                 </div>
-                    <h4>Contact me if you have any question</h4>
 
 
 

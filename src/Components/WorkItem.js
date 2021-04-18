@@ -1,35 +1,26 @@
 import React from "react";
 
-export class WorkItem extends React.Component {
+export const WorkItem = ({title, description, img, color,  id, showItemsDescription}) => {
+    return (
+            <div className="WorkItem red">
 
-    render() {
-        return (
-            <div className="WorkItem" onClick={console.log("clcik")}>
+                <body className=""  style={{background: color }}>
 
-                <body>
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Mediawiki-mobile-smartphone.png" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Mediawiki-mobile-smartphone.png" />
+                <img src={img} className="App-logo" alt="logo" />
                 </body>
 
-                <footer>
-                  <h2>Ava</h2>
-                <h4>Storytelling</h4>
-                <h4>Communication</h4>
-                <h4>Product Design</h4>
+                <div className="ItemFooter">
+                  <h2 className="red">{title}</h2>
+                    <h4>{description[0]}</h4>
+                    <span className="dot"/>
+                    <h4>{description[1]}</h4>
+                    <span className="dot"/>
+                    <h4>{description[2]}</h4>
 
-                </footer>
+                </div>
 
             </div>
         );
-    }
-
-
-
-
-
-
-
 
 
 }

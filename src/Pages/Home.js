@@ -10,6 +10,7 @@ export class Home extends React.Component {
         super(props);
         this.state = {
             opacity: 1,
+            cursorColor: "#e5e5e5",
             clientX : 100,
             clientY : 100,
 
@@ -19,13 +20,34 @@ export class Home extends React.Component {
 
     componentDidMount() {
         document.addEventListener("mousemove", this.mouseListener)
+        document.addEventListener("mouseover", this.mouseListener2)
     }
 
     mouseListener = (e) => {
+
+
+
         this.setState({
            clientX : e.clientX-25,
            clientY : e.clientY-20,
         })
+    }
+
+    mouseListener2 = (e) => {
+
+        if (e.target.className === "red"){
+
+            this.setState({
+                cursorColor: "red",
+                transform: "scale(1.5)"
+            })
+        }else {
+            this.setState({
+                transform: "none",
+                cursorColor: "#e5e5e5"
+            })
+        }
+
     }
 
 
@@ -37,8 +59,8 @@ export class Home extends React.Component {
                <Header />
                <Portfolio />
                <Contact />
-                <div className="cursor cursor--small" style={{left: this.state.clientX, top: this.state.clientY}}/>
 
+                <div id="cou" className="cursor cursor--small red" style={{background: this.state.cursorColor, transform: this.state.transform, left: this.state.clientX, top: this.state.clientY}}/>
             </div>
         );
     }

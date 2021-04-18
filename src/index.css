@@ -20,27 +20,9 @@ font-family: serif;
   --blueGradient: linear-gradient(130deg, var(--blue), var(--blueLight));
 }
 
-.flex-child-1:hover+.flex-child-2 {
-  color: #FF3333;
-}
 
-.Navbar:hover  .cursor {
-  background: #0000bc;
-
-}
-
-.Portfolio > div:hover  + .cursor {
-  background: #0000bc;
-
-}
-
-.Contact:hover  ~  .cursor {
-  background: #0000bc;
-
-}
-.big {
-  height: 100px;
-  width: 100px;
+::selection {
+  color: red;
 }
 
 .Navbar {
@@ -54,10 +36,20 @@ font-family: serif;
 }
 
 .Navbar > h4 {
-  color: #929292;
   font-size: 20px;
+
 }
 
+.Navbar > h4:active{
+  color: blue;
+}
+
+.red:hover  .red,
+.red:hover,
+.Portfolio:hover ~ #cou
+  {
+  color: red;
+}
 
 .Home {
   display: flex;
@@ -86,9 +78,9 @@ font-family: serif;
 .Portfolio {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   max-width: 1300px;
+  justify-content: center;
   width: 100%;
   margin: auto;
   top: 42vh;
@@ -99,7 +91,7 @@ font-family: serif;
 .WorkItem {
   width: 480px;
   height: 370px;
-  margin: 80px 10px 10px;
+  margin: 80px 15px 10px;
 
 }
 
@@ -107,47 +99,54 @@ font-family: serif;
   transform: scale(1.05);
 }
 
-.Portfolio :hover  h2:after
+.Portfolio :hover h2:after
 {
-  color: red;
   content: " \2192";
   transform: scale(1.5);
 
 }
 
-.Portfolio :hover  h2,
-.Navbar :hover
-{
-  color: red;
 
-}
 
 .WorkItem > body{
   height: 70%;
-background-color: #526fff;
+background: #526fff;
   text-align: center;
   padding: 30px;
+  display: flex;
+  justify-content: center;
  }
 
 .WorkItem > body > img {
-  height: 100%;
   transition: transform .5s ease-out;
-
 }
 
-.WorkItem > footer {
-  line-height: 10px;
+.WorkItem > .ItemFooter {
+  height: 50px;
+  line-height: 5px;
+  transition: transform .5s ease-out;
 }
 
-.WorkItem > footer > h2 {
+ .ItemFooter > h2 {
   color: #0000bc;
 }
 
-.WorkItem > footer > h4 {
-  display: inline;
-  margin-right: 15px;
+.WorkItem > .ItemFooter > h4 {
+  display: inline-block;
+line-height: 0px;
   color: #8f8f8f;
-  transition: transform .5s ease-out;
+
+
+}
+
+
+.dot {
+  height: 2px;
+  width: 2px;
+  background-color: gray;
+  border-radius: 50%;
+display: inline-block;
+  margin: 0 15px 3px 15px;
 
 
 }
@@ -202,9 +201,6 @@ margin-top: 2em}
 
 }
 
-.Footer > p:hover {
-  color: red;
-}
 
 .Footer > p{
   margin: 20px;
@@ -215,7 +211,9 @@ margin-top: 2em}
   left: 10px;
   top: 100px;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.3;
+  transition: transform .7s ease-out;
+
 }
 .cursor--small {
   width: 40px;

@@ -12,7 +12,6 @@ export class App extends React.Component {
             <div className="App">
                 <Navbar />
                <Home />
-                <div className="cursor cursor--small big" />
             </div>
         );
     }
