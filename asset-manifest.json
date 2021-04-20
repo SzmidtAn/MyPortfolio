@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.3cfb27e4.chunk.css",
-    "main.js": "/MyPortfolio/static/js/main.2cd88031.chunk.js",
-    "main.js.map": "/MyPortfolio/static/js/main.2cd88031.chunk.js.map",
+    "main.css": "/MyPortfolio/static/css/main.e2e95639.chunk.css",
+    "main.js": "/MyPortfolio/static/js/main.444afdaa.chunk.js",
+    "main.js.map": "/MyPortfolio/static/js/main.444afdaa.chunk.js.map",
     "runtime-main.js": "/MyPortfolio/static/js/runtime-main.732ff595.js",
     "runtime-main.js.map": "/MyPortfolio/static/js/runtime-main.732ff595.js.map",
     "static/js/2.baac3eec.chunk.js": "/MyPortfolio/static/js/2.baac3eec.chunk.js",
@@ -10,19 +10,19 @@
     "static/js/3.eb58a600.chunk.js": "/MyPortfolio/static/js/3.eb58a600.chunk.js",
     "static/js/3.eb58a600.chunk.js.map": "/MyPortfolio/static/js/3.eb58a600.chunk.js.map",
     "index.html": "/MyPortfolio/index.html",
-    "static/css/main.3cfb27e4.chunk.css.map": "/MyPortfolio/static/css/main.3cfb27e4.chunk.css.map",
+    "static/css/main.e2e95639.chunk.css.map": "/MyPortfolio/static/css/main.e2e95639.chunk.css.map",
     "static/js/2.baac3eec.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.baac3eec.chunk.js.LICENSE.txt",
     "static/media/IMG_20180829_162211 (2).65433d2f.png": "/MyPortfolio/static/media/IMG_20180829_162211 (2).65433d2f.png",
-    "static/media/Web 1920 – 1.765ecac5.png": "/MyPortfolio/static/media/Web 1920 – 1.765ecac5.png",
-    "static/media/auctionp.7082fb59.png": "/MyPortfolio/static/media/auctionp.7082fb59.png",
-    "static/media/memoryGame.68b1382a.png": "/MyPortfolio/static/media/memoryGame.68b1382a.png",
-    "static/media/passME.f72f5586.png": "/MyPortfolio/static/media/passME.f72f5586.png",
-    "static/media/storySpot.024a5592.png": "/MyPortfolio/static/media/storySpot.024a5592.png"
+    "static/media/Web 1920 – 1.7ce89580.png": "/MyPortfolio/static/media/Web 1920 – 1.7ce89580.png",
+    "static/media/auctionp.bd365e32.png": "/MyPortfolio/static/media/auctionp.bd365e32.png",
+    "static/media/memoryGame.f6db4773.png": "/MyPortfolio/static/media/memoryGame.f6db4773.png",
+    "static/media/passME.05e83c47.png": "/MyPortfolio/static/media/passME.05e83c47.png",
+    "static/media/storySpot.a3f2f443.png": "/MyPortfolio/static/media/storySpot.a3f2f443.png"
   },
   "entrypoints": [
     "static/js/runtime-main.732ff595.js",
     "static/js/2.baac3eec.chunk.js",
-    "static/css/main.3cfb27e4.chunk.css",
-    "static/js/main.2cd88031.chunk.js"
+    "static/css/main.e2e95639.chunk.css",
+    "static/js/main.444afdaa.chunk.js"
   ]
 }
