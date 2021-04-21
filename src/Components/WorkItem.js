@@ -11,11 +11,14 @@ export const WorkItem = ({title, description, img, color,  id, showItemsDescript
 
                 <div className="ItemFooter">
                   <h2 className="red">{title}</h2>
+                    <div className="ItemFooterDetails">
+
                     <h4>{description[0]}</h4>
                     <span className="dot"/>
                     <h4>{description[1]}</h4>
                     <span className="dot"/>
                     <h4>{description[2]}</h4>
+                    </div>
 
                 </div>
 

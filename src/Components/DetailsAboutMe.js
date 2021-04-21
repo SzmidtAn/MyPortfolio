@@ -13,7 +13,7 @@ export class DetailsAboutMe extends React.Component {
                 <img src={img} className="img-about" alt="img" />
                 <div id="triangle-left"/>
                 <div id="triangle-left"/>
-                <p>Student in programming area with specialization in Application Development.
+                <p className="red" style={{color: 'black'}}>Student in programming area with specialization in Application Development.
                     Almost a year ago I started coding and since then programming has become my biggest interest. Right now I am looking for an internship, and would also like to participate in an exciting project, where I can develop my current knowledge in Android and iOS.
                   <br/>
                   <br/>

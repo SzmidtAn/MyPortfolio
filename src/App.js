@@ -25,17 +25,17 @@ export class App extends React.Component {
 
 
                         <Switch>
-                            <Route path="/about">
+                            <Route path="/MyPortfolio/about">
                                 <About />
                             </Route>
 
-                            <Route path="/">
+                            <Route path="/MyPortfolio">
                                 <Home />
                             </Route>
                         </Switch>
                     </div>
-                <Footer />
                 </Router>
+                <Footer />
             </div>
         );
     }

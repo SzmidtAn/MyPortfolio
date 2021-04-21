@@ -10,12 +10,12 @@ export class ThirdAbout extends React.Component {
             <div className="ThirdAbout">
 
                 <div className="intressed">
-                <h1>Intressad?
+                <h1>Interested?
                 </h1>
                     <h2>
-                        I'm looking forword
+                       I'm looking forward
                         <br/>
-                        to get a messge from you!
+                        to get a message from you!
                     </h2>
                 </div>
 
