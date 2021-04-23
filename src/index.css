@@ -1,31 +1,42 @@
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2b2b2c;
+body, html {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+
+*, *:before, *:after {
+  box-sizing: content-box;
+  max-width: 100vw;
+  overflow: unset;
+}
+
+.App {
+  margin: 0;
 
 }
 
+/*--red:     #FE5F55;*/
+/*--blue: #577399 ;*/
+
 :root {
-  --red:     #ff595e;
-  --redDark: #f8837c;
-  --blue: #1325c1;
-  --grey: #b8b8b8;
-  --blueLight: #9AA5F4;
+  --red:     #F45B69;
+  --blue: #4062BB ;
+  --grey: #C8D3D5;
   --yellow: #FFDE00;
-  --orangeDark: #faaf3c;
   --black: #302f2f;
-  --fullwidth: 100%;
-  --redGradient: linear-gradient(130deg, var(--red), var(--redDark));
+  --passMePurple: #A264F2;
+  --blueGradient: linear-gradient(45deg, #0f3e73, #0C69C5);
 
 }
 
 
 ::selection {
-  color: red;
+  color: var(--red);
 }
 
 .Navbar {
-  height: 90px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -33,6 +44,10 @@ body {
   width: 100%;
   margin: auto;
   color: var(--grey);
+  background-color: #ffffff30;
+  position: sticky;
+  top: 00px;
+  z-index: 100;
 }
 
 .Navbar > * {
@@ -42,18 +57,19 @@ body {
   font-size: 20px;
   link: none;
   border: 0;
-  color: #1a52b0;
+  color: var(--blue);
+  margin: auto;
 
 
 }
 
 
 .active{
-  color: #c4c4c4;
+  color: var(--grey);
 }
 
 .blue{
-  color: #1a52b0;
+  color: var(--blue);
 }
 
 
@@ -120,9 +136,10 @@ body {
 
 
 
+
 .WorkItem > body{
   height: 80%;
-background: #526fff;
+background: #ea2d2d;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -130,6 +147,7 @@ background: #526fff;
   overflow: hidden;
   margin: 0;
 
+  border-radius: 10px;
  }
 
 .WorkItem > body > img {
@@ -145,7 +163,7 @@ background: #526fff;
 }
 
  .ItemFooter > h2 {
-  color: #0000bc;
+   color: var(--blue);
 }
 
  .WorkItem .ItemFooterDetails {
@@ -153,13 +171,13 @@ background: #526fff;
    flex-direction: row;
    line-height: 0;
    align-items: center;
-   color: gray;
+   color: var(--grey);
  }
 
 
 
 .dot {
-  background-color: gray;
+  background-color: var(--grey);
   height: 2px;
   width: 2px;
   border-radius: 50%;
@@ -204,12 +222,14 @@ margin-top: 2em;
 
 
 
-.block-reveal {
+.block-reveal{
   --td: 1.2s;
   --d: 0.1s;
   --t: calc(var(--td) + var(--d));
 
-  color: transparent;
+  border-left-color:  transparent;
+
+  visibility: unset;
   padding: 4px;
   margin-bottom: 0;
 
@@ -219,7 +239,8 @@ margin-top: 2em;
   animation: revealBlock 0s var(--t) forwards;
 }
 
-.block-reveal::after {
+.block-reveal::after
+{
   content: '';
 
   width: 0%;
@@ -244,8 +265,16 @@ margin-top: 2em;
 
 /* animations */
 @keyframes revealBlock {
+  0% {
+
+    filter: opacity(0.5);
+  }
+
+  50%{
+  }
   100% {
     color: #0f0f0f;
+
   }
 }
 
@@ -284,7 +313,7 @@ margin-top: 2em;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #0000bc;
+  color: var(--blue);
   font-weight: bold;
   border-top: solid 1px black;
   padding-top: 50px;
@@ -323,18 +352,28 @@ margin-top: 2em;
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: auto;
-  max-width: 1300px;
-  width: 100%;
+  padding: 0;
+  width: 100vw;
   flex-wrap: wrap;
   position: relative;
+  box-sizing: border-box;
+}
+
+.block {
+  width: 100vw;
+  background-color: var(--yellow);
+
 }
 
 
+@keyframes mymove {
+  from {right: -100vw;}
+  to {right: 0;}
+}
 
-h1 {
+.About h1 {
   font-size: 60px;
-  background: linear-gradient(to top, #FFDE00 45%, transparent 45%);
+  background: linear-gradient(to top, var(--yellow) 45%, transparent 45%);
 
 }
 
@@ -349,6 +388,8 @@ h1 {
 }
 
 .DetailsAbout {
+  width: 100vw;
+  max-width: 1300px;
 }
 
 .DetailsAbout img{
@@ -356,7 +397,7 @@ h1 {
   width: 50%;
   height: auto;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  filter: grayscale(100%) opacity(1);
 }
 
 .DetailsAbout p {
@@ -368,15 +409,16 @@ h1 {
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
-  border-left: 100px solid  #FFDE00;
+  border-left: 100px solid;
+  border-left-color:  var(--yellow);;
   border-bottom: 50px solid transparent;
 }
 
 
 .SecondAbout{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-color: #FFDE00;
+  background-color:var(--yellow);
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -384,6 +426,7 @@ h1 {
   justify-content: center;
   align-items: center;
 
+  margin: 0;
   position: sticky;
   top: 0;
 }
@@ -404,7 +447,7 @@ h1 {
 
 
 .ThirdAbout {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #ffff;
   position: relative;
@@ -498,6 +541,329 @@ p {
 
 
 
+/****************** Story Spot *******************/
+
+.StorySpot {
+  width: 100vw;
+  top: 0;
+  position: relative;
+}
+
+.StorySpotHeader {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+
+  position: sticky;
+  top: 0;
+
+}
+
+.StorySpotHeader img {
+  height:  700px;
+
+
+}
+
+.StorySpotHeader > div {
+  display: table-column;
+  flex-direction: column;
+  color: white;
+  align-self: center;
+  font-size: 30px;
+}
+
+.StorySpotHeader > * {
+  margin: 50px;
+}
+
+.StorySpotBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  background: white;
+  padding-bottom: 150px;
+justify-content: center;
+  align-items: center;
+
+}
+
+
+.StorySpotBody img {
+  width: 400px;
+  margin-top: 100px;
+  align-self: start;
+}
+
+.StorySpotBody div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.StorySpotBody > div > h1 {
+  text-align: start;
+  alignment: center;
+  color: #0f3e73;
+
+  margin: 100px 100px 0 100px ;
+
+}
+
+
+
+.StorySpotBody > div > img {
+  height: auto;
+  width: 350px;
+  filter:  drop-shadow(0px 0px 0px );
+  margin: 100px 100px 0 100px ;
+
+}
+
+
+
+
+
+
+
+.BlueGradient,
+.PassMeIcons {
+  width: 100%;
+  height: 80vh;
+  background: var(--blueGradient);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BlueGradient div,
+.PassMeIcons div {
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-area: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: #0f3e7350;
+}
+
+.BlueGradient img,
+.PassMeIcons img {
+  margin: auto;
+  width: 150px;
+
+}
+.BlueGradient img:hover,
+.PassMeIcons img:hover {
+  transform: scale(1.2);
+}
+
+
+/******************* PASSWORD MANAGER ******************************/
+
+.PasswordManager{
+max-width: 100vw;
+  --w:140vw;
+  --h:200vh;
+  background:
+          linear-gradient(to bottom right,transparent 49.8%,#fff 50%) calc(70% + calc(var(--w)/4)) 0 /calc(var(--w)/2) var(--h),
+          linear-gradient(to bottom left, transparent 49.8%,#fff 50%) calc(70% - calc(var(--w)/4)) 0 /calc(var(--w)/2) var(--h),
+          linear-gradient(90deg, var(--passMePurple), #BD97EF)top center/ var(--w) var(--h);
+
+  background-repeat:no-repeat;
+
+}
+
+.PasswordManager img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+#triangle-pass-back{
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-right: 100vw solid transparent;
+  border-top: 150vw solid;
+  border-top-color:  var(--passMePurple);;
+  border-left: 100vw solid transparent;
+  transform: translateY(-300px) rotate(10deg);
+
+}
+
+.PassMeHeader{
+
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.PassMeHeader > * {
+  margin: 100px;
+  text-align: center;
+  
+}
+
+.PassMeHeader  img {
+  height: 80px;
+}
+
+
+.PassMeHeader h1 {
+  font-size: 70px;
+  margin-top: 10px;
+}
+
+.PassMeHeader > img {
+  height: 60%;
+  transform: rotate(-15deg);
+  filter: drop-shadow(15px 15px 15px var(--passMePurple));
+}
+
+
+.PassMeTiles{
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+
+.PassMeTiles > div {
+  width: 200px;
+  background-color: white;
+  color: var(--passMePurple);
+  margin: 5%;
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px #920DD4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.PassMeTiles h1 {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+
+.PassMeTiles img {
+  width: 80%;
+  height: auto;
+}
+
+
+
+
+.PassMeBody{
+  padding-top: 150px;
+  color: var(--passMePurple);
+  width: 100%;
+  max-width: 100vw;
+
+}
+
+.PassMeBody div {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 150px;
+}
+
+.PassMeBody img {
+  width: 200px;
+  height: auto;
+  margin: 100px;
+}
+
+
+
+
+
+.PassMeScanner{
+  background-color: var(--passMePurple);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  border-radius: 80px;
+  padding-top: 50px;
+}
+
+.PassMeScanner div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.PassMeScanner img {
+  height: auto;
+  width: 40%;
+
+  align-self: end;
+  margin-left: 100px;
+  transform: scale(1.1);
+}
+
+
+
+.PassMeIcons{
+background: var(--passMePurple);
+
+  margin-top: 200px;
+}
+
+.PassMeIcons div {
+  background-color: #BD97EF;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /************* media ******************/
 
 @media (min-width: 1040px) {
@@ -506,7 +872,7 @@ p {
   .active:hover,
   .Portfolio:hover ~ #cou
   {
-    color: red;
+    color: var(--red);
   }
 }
 
@@ -539,7 +905,7 @@ p {
     }
 
     .ItemFooter > h2 {
-      color: #0000bc;
+      color: var(--blue);
     }
 
     .dot {
@@ -608,7 +974,7 @@ margin: 0;
     height: 0;
     position: absolute;
     border-top: 150px solid transparent;
-    border-left: 300px solid  #FFDE00;
+    border-left: 300px solid  var(--yellow);
     border-bottom: 150px solid transparent;
   }
 
@@ -621,6 +987,139 @@ margin: 0;
     filter: grayscale(100%) drop-shadow(-1.5px -1.5px 0px white);
 
   }
+
+
+  /***************** StorySpot *******************/
+
+    .Navbar {
+      width: 100vw;
+    }
+
+    .StorySpot {
+      max-width: 100vw;
+      margin: 0;
+    }
+
+    .StorySpotBody > img {
+      max-width: 80vw;
+      align-self: center;
+    }
+
+    .StorySpotHeader {
+      position: relative;
+      flex-wrap: wrap;
+      height: auto;
+      max-width: 100vw;
+      margin: 0;
+    }
+
+
+
+    .StorySpotBody > div > h1 {
+      margin: 0px auto;
+      order: 2;
+
+
+    }
+
+
+    .StorySpotBody > div > img,
+    .StorySpotHeader img {
+
+      width: 350px;
+      height: auto;
+      max-width: 100vw;
+      margin: 80px auto auto auto;
+      order: 1;
+
+    }
+
+    .StorySpot .BlueGradient div,
+    .PassMeIcons div{
+      width: 100vw;
+    }
+
+
+    .StorySpotHeader > * {
+    }
+
+
+    /***************** Password Manager *******************/
+
+    .PasswordManager{
+      background: white;
+    }
+
+    .PassMeHeader {
+      height: auto;
+      background: var(--passMePurple);
+      position: relative;
+      flex-wrap: wrap;
+      max-width: 100vw;
+      margin: 0;
+
+    }
+
+    .PassMeHeader > img {
+      width: 250px;
+      height: auto;
+      max-width: 100vw;
+      transform: rotate(0deg);
+
+
+    }
+
+    .PassMeBody{
+      padding-top: 0;
+    }
+
+    .PassMeBody div {
+      width: 100vw;
+      height: auto;
+      margin: 150px 0 0 0;
+    }
+
+    .PassMeBody img {
+      width: 60%;
+      height: auto;
+      order: 1;
+    }
+
+    .PassMeBody h1 {
+      width: 100vw;
+      height: auto;
+      text-align: center;
+      margin: auto;
+      order: 2;
+    }
+
+
+
+    .PassMeScanner {
+      border-radius: 0;
+    padding: 10px;
+      margin-top: 100px ;
+    }
+
+    .PassMeScanner > div {
+      font-size: 18px;
+
+    }
+
+    .PassMeScanner img {
+      margin-left: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

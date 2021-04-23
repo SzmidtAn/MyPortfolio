@@ -5,6 +5,10 @@ import img2 from '../Static/passME.png';
 import img3 from '../Static/storySpot.png';
 import img4 from '../Static/memoryGame.png';
 import img5 from '../Static/auctionp.png';
+import {NavLink, Link, BrowserRouter} from "react-router-dom";
+import { Redirect} from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 
 export class Portfolio extends React.Component {
 
@@ -18,21 +22,21 @@ export class Portfolio extends React.Component {
 
     componentDidMount = () => {
         let item1 = {name: "Make a Story",
-        description: ["web app", "mobile-friendly design", "firebase"], img: img1, color: "#FDEED2", id:1 }
+        description: ["web app", "mobile-friendly design", "firebase"], img: img1, color: "#FFA5A7", id:1 }
 
         let item2 = {name: "Password Manager",
             description: ["Android", "Product Design", "Google Maps"], img: img2, color:'#C7A3F4', id:2 }
 
         let item3 = {name: "StorySpot",
-            description: ["Android", "Product Design", "Google Maps"], img: img3, color: '#7FC8C7', id:3 }
+            description: ["Android", "Product Design", "Google Maps"], img: img3, color: '#7794A8', id:3 }
 
         let item4 = {name: "Memory Matching Game",
-            description: ["Android", "Product Design", "Google Maps"], img: img4, color: "#FFF6E4", id:4 }
+            description: ["Android", "Product Design", "Google Maps"], img: img4, color: "#f5c4f8", id:4 }
 
         let item5 = {name: "Auction Portal",
-            description: ["Android", "Product Design", "Google Maps"], img: img5, color: "#7BA5F6", id:5 }
+            description: ["Android", "Product Design", "Google Maps"], img: img5, color: "#DED8D0", id:5 }
 
-            let item6 = {name: "StoryfSpot",
+            let item6 = {name: "Barber Shop",
                 description: ["Android", "Product Design", "Google Maps"], img: "", id:6 }
 
             let items = [item1, item2, item3, item4, item5, item6]
@@ -43,7 +47,14 @@ export class Portfolio extends React.Component {
     }
 
     handleClick = (title, id) => {
-        window.location.href = `details?${title}&id=${id}`;
+    // window.location.href = `/MyPortfolio/details?${title}&id=${id}`;
+
+        const i = id
+        this.setState({
+            id: i
+        })
+        console.log(i )
+
     }
 
     itemToItem  = (item) => {
@@ -62,6 +73,11 @@ export class Portfolio extends React.Component {
 
 
                 {this.state.items.map(this.itemToItem)}
+
+                {this.state.id ? <Redirect  to={
+                    {pathname: '/details',
+                        aboutProps:{
+                            id : this.state.id}}  } /> : null }
 
 
             </div>

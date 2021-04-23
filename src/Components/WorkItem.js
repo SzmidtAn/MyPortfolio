@@ -1,12 +1,13 @@
 import React from "react";
 
 export const WorkItem = ({title, description, img, color,  id, showItemsDescription}) => {
+
     return (
-            <div className="WorkItem red">
+            <div className="WorkItem red" onClick={() => showItemsDescription(title, id)}>
 
                 <body className=""  style={{background: color }}>
 
-                <img src={img} className="App-logo" alt="logo" />
+                <img src={img} className="App-logo" style={title === "StorySpot" ? {height: '100%'} : {}} alt="logo" />
                 </body>
 
                 <div className="ItemFooter">

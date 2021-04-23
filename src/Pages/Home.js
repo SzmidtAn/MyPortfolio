@@ -19,6 +19,7 @@ export class Home extends React.Component {
 
 
     componentDidMount() {
+        window.scrollTo(0, 0)
         document.addEventListener("mousemove", this.mouseListener)
         document.addEventListener("mouseover", this.mouseListener2)
     }
