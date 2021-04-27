@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.01207474.chunk.css",
-    "main.js": "/MyPortfolio/static/js/main.00885c56.chunk.js",
-    "main.js.map": "/MyPortfolio/static/js/main.00885c56.chunk.js.map",
+    "main.css": "/MyPortfolio/static/css/main.34de155f.chunk.css",
+    "main.js": "/MyPortfolio/static/js/main.bf060167.chunk.js",
+    "main.js.map": "/MyPortfolio/static/js/main.bf060167.chunk.js.map",
     "runtime-main.js": "/MyPortfolio/static/js/runtime-main.732ff595.js",
     "runtime-main.js.map": "/MyPortfolio/static/js/runtime-main.732ff595.js.map",
     "static/js/2.4474cd39.chunk.js": "/MyPortfolio/static/js/2.4474cd39.chunk.js",
@@ -10,32 +10,38 @@
     "static/js/3.eb58a600.chunk.js": "/MyPortfolio/static/js/3.eb58a600.chunk.js",
     "static/js/3.eb58a600.chunk.js.map": "/MyPortfolio/static/js/3.eb58a600.chunk.js.map",
     "index.html": "/MyPortfolio/index.html",
-    "static/css/main.01207474.chunk.css.map": "/MyPortfolio/static/css/main.01207474.chunk.css.map",
+    "static/css/main.34de155f.chunk.css.map": "/MyPortfolio/static/css/main.34de155f.chunk.css.map",
     "static/js/2.4474cd39.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.4474cd39.chunk.js.LICENSE.txt",
     "static/media/131314759_221929029334767_3525483112211750233_n.67c66b99.png": "/MyPortfolio/static/media/131314759_221929029334767_3525483112211750233_n.67c66b99.png",
     "static/media/131330286_4079066262122438_6398664257654698935_n.96a84547.png": "/MyPortfolio/static/media/131330286_4079066262122438_6398664257654698935_n.96a84547.png",
     "static/media/2.2cfb59fc.png": "/MyPortfolio/static/media/2.2cfb59fc.png",
+    "static/media/2650152.9d7d1dd6.jpg": "/MyPortfolio/static/media/2650152.9d7d1dd6.jpg",
+    "static/media/60285-business-icons-idea-computer-brainstorming-social.fcf7097a.png": "/MyPortfolio/static/media/60285-business-icons-idea-computer-brainstorming-social.fcf7097a.png",
     "static/media/IMG_20180829_162211 (2).65433d2f.png": "/MyPortfolio/static/media/IMG_20180829_162211 (2).65433d2f.png",
     "static/media/Web 1920 – 1.7ce89580.png": "/MyPortfolio/static/media/Web 1920 – 1.7ce89580.png",
     "static/media/apple.884eb85f.png": "/MyPortfolio/static/media/apple.884eb85f.png",
     "static/media/auctionp.bd365e32.png": "/MyPortfolio/static/media/auctionp.bd365e32.png",
     "static/media/checked (1).6ce55449.png": "/MyPortfolio/static/media/checked (1).6ce55449.png",
     "static/media/face-detection.ce0244e8.png": "/MyPortfolio/static/media/face-detection.ce0244e8.png",
+    "static/media/icons8-react-200.d32b912d.png": "/MyPortfolio/static/media/icons8-react-200.d32b912d.png",
     "static/media/imgbin_core-data-software-framework-database-png.9d0d17a7.png": "/MyPortfolio/static/media/imgbin_core-data-software-framework-database-png.9d0d17a7.png",
     "static/media/locker.0beffd32.png": "/MyPortfolio/static/media/locker.0beffd32.png",
     "static/media/logo_transparent_small.ab0bd453.png": "/MyPortfolio/static/media/logo_transparent_small.ab0bd453.png",
+    "static/media/make a stor.3c9d097e.png": "/MyPortfolio/static/media/make a stor.3c9d097e.png",
     "static/media/memoryGame.f6db4773.png": "/MyPortfolio/static/media/memoryGame.f6db4773.png",
     "static/media/organize.1b15e4a8.png": "/MyPortfolio/static/media/organize.1b15e4a8.png",
     "static/media/passME.05e83c47.png": "/MyPortfolio/static/media/passME.05e83c47.png",
     "static/media/passmepage.3a321a3d.png": "/MyPortfolio/static/media/passmepage.3a321a3d.png",
     "static/media/storySpot.a3f2f443.png": "/MyPortfolio/static/media/storySpot.a3f2f443.png",
     "static/media/storymap.33d9fc06.png": "/MyPortfolio/static/media/storymap.33d9fc06.png",
-    "static/media/—Pngtree—scan code with mobile phone_5765181.1591da64.png": "/MyPortfolio/static/media/—Pngtree—scan code with mobile phone_5765181.1591da64.png"
+    "static/media/—Pngtree—blue purple book education information_5374873.1957f67f.png": "/MyPortfolio/static/media/—Pngtree—blue purple book education information_5374873.1957f67f.png",
+    "static/media/—Pngtree—scan code with mobile phone_5765181.1591da64.png": "/MyPortfolio/static/media/—Pngtree—scan code with mobile phone_5765181.1591da64.png",
+    "static/media/—Pngtree—the light bulb is full_5225125.b0629d7e.png": "/MyPortfolio/static/media/—Pngtree—the light bulb is full_5225125.b0629d7e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.732ff595.js",
     "static/js/2.4474cd39.chunk.js",
-    "static/css/main.01207474.chunk.css",
-    "static/js/main.00885c56.chunk.js"
+    "static/css/main.34de155f.chunk.css",
+    "static/js/main.bf060167.chunk.js"
   ]
 }
